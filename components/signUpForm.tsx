@@ -38,11 +38,11 @@ const Form = () => {
   const { errors, touched, values, handleChange, handleSubmit, handleBlur } = formik;
 
   const validationCriteria = {
-    minLength: /[A-Za-z0-9!@#$%^&*()_]{8,}/.test(values.password), // At least 8 characters
-    hasUppercase: /[A-Z]/.test(values.password), // At least one uppercase letter
-    hasLowercase: /[a-z]/.test(values.password), // At least one lowercase letter
-    hasNumber: /[0-9]/.test(values.password), // At least one digit
-    hasSpecialChar: /[!@#$%^&*(),.?":{}|<>_]/.test(values.password), // At least one special character
+    minLength: /[A-Za-z0-9!@#$%^&*()_]{8,}/.test(values.password),
+    hasUppercase: /[A-Z]/.test(values.password), 
+    hasLowercase: /[a-z]/.test(values.password),
+    hasNumber: /[0-9]/.test(values.password), 
+    hasSpecialChar: /[!@#$%^&*(),.?":{}|<>_]/.test(values.password), 
   };
 
   const isPasswordValid = Object.values(validationCriteria).every(Boolean);
